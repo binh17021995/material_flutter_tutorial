@@ -21,7 +21,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
     new Timer(const Duration(milliseconds: 3000), (){
       setState(() {
-        print("fffff");
         Navigator.of(context).pushAndRemoveUntil(
 
             MaterialPageRoute(builder: (context) => LogIn()), (route) => false);
@@ -32,7 +31,6 @@ class _SplashScreenState extends State<SplashScreen> {
         Duration(milliseconds: 10),(){
       setState(() {
         _isVisible = true;
-        print("hhhhhhh");
 
       });
     }
