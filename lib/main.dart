@@ -1,28 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
-import 'package:material_flutter_tutorial/login.dart';
-import 'package:material_flutter_tutorial/splast_screen.dart';
-import 'login.dart';
+import 'package:material_flutter_tutorial/expand/expanded_demo.dart';
+import 'package:material_flutter_tutorial/list_view/list_view.dart';
+import 'package:material_flutter_tutorial/log_in/splast_screen/splast_screen.dart';
+
+
+import 'log_in/splast_screen/login_ui_app.dart';
+
 
 void main() {
-  runApp(LoginUiApp());
+  runApp(ListViewDemo());
 }
 
-class LoginUiApp extends StatelessWidget {
-
-  Color _primaryColor = HexColor('#DC54FE');
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Login UI',
-      theme: ThemeData(
-        primaryColor: _primaryColor,
-        scaffoldBackgroundColor: Colors.grey.shade100,
-        primarySwatch: Colors.grey,
-      ),
-      home: SplashScreen(title: 'Flutter Login'),
-    );
-  }
-}
 
 

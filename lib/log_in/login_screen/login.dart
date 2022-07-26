@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:material_flutter_tutorial/input_decoration.dart';
+import 'package:material_flutter_tutorial/log_in/login_screen/input_decoration.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({Key? key}) : super(key: key);
@@ -16,9 +16,8 @@ void creatUser() {
 }
 
 class _MyLogin extends State<LogIn> {
-
-  final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
   final emailControler = TextEditingController();
+  final passControler = TextEditingController();
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -27,7 +26,6 @@ class _MyLogin extends State<LogIn> {
         body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
-              key: _formkey,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 ConstrainedBox(
@@ -86,6 +84,7 @@ class _MyLogin extends State<LogIn> {
                       padding: const EdgeInsets.symmetric(horizontal: 30),
                       child: TextFormField(
                           obscureText: true,
+                          controller: passControler,
                           style: const TextStyle(
                               fontSize: 18, color: Colors.black),
                           cursorColor: Colors.black,
@@ -103,7 +102,7 @@ class _MyLogin extends State<LogIn> {
                           style: TextStyle(fontSize: 15),
                         ),
                         onPressed: () {
-                          if (_formkey.currentState!.validate()) {}
+                        // do something
                         },
                         style: ElevatedButton.styleFrom(
                             primary: Colors.blueAccent,
